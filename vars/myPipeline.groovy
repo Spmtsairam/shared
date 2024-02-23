@@ -2,13 +2,13 @@ def call() {
     pipeline {
         agent any
         stages {
-            stage ('Git Chechout'){
-                steps {
-                    script {
-                       git branch: 'node-dev', url: 'https://github.com/Spmtsairam/multi-branch.git'
-                    }
-                }
-            }
+            // stage ('Git Chechout'){
+            //     steps {
+            //         script {
+            //            git branch: 'node-dev', url: 'https://github.com/Spmtsairam/multi-branch.git'
+            //         }
+            //     }
+            // }
              stage ('Build'){
                 steps {
                     script {
