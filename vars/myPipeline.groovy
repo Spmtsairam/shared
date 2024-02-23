@@ -2,20 +2,20 @@ def call() {
     pipeline {
         agent any
         stages {
-            // stage('Git Checkout') {
-            //     steps {
-            //         script {
-            //             git branch: 'node-dev', url: 'https://github.com/naresh26git/multi-branch.git'
-            //         }
-            //     }
-            // }
-            stage ('Build') {
+            stage ('Git Chechout'){
+                steps {
+                    script {
+                       git branch: 'node-dev', url: 'https://github.com/Spmtsairam/multi-branch.git'
+                    }
+                }
+            }
+             stage ('Build'){
                 steps {
                     script {
                         sh 'npm install'
                     }
                 }
-            }
+             }
             // stage ('SonarQube Analysis') {
             //     steps {
             //         script { 
